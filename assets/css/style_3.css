@@ -1,17 +1,7 @@
-.sec {
+/* .sec {
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.article.W33 {
-    width: 32%;
-    float: left;
-}
-
-.W1050 .W33.center {
-    margin-left: 2%;
-    margin-right: 2%;
-}
+} */
 
 .btn {
     border-radius: 25px;
@@ -36,15 +26,18 @@
     margin-right: -15px;
 }
 
-#sec4 {
-    padding-left: 0;
-    padding-right: 0;
+.article.W50 {
+    float: left;
 }
 
-@media (max-width: 450px) {
-    .article.W33 {
-        width: 90%;
-        float: none;
-    }
-    .W1050 .W33.center {}
+.pic {
+    width: 130px;
 }
+
+#sec1 {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media (max-width: 450px) {}

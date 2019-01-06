@@ -451,6 +451,11 @@ a {
     padding-bottom: 90px;
 }
 
+.dl.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 @media (min-width: 769px) {
     #banner:hover>div {
         transform: translate(0, 110%);
@@ -573,8 +578,11 @@ a {
     .f16 {
         font-size: 13px;
     }
-    .f18 {
+    .f16 {
         font-size: 14px;
+    }
+    .f18 {
+        font-size: 15px;
     }
     .f21 {
         font-size: 17px;
@@ -686,6 +694,10 @@ a {
     }
     .more {
         display: block;
+    }
+    .title,
+    .content {
+        line-height: 1.5;
     }
 }
 
