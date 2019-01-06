@@ -1,0 +1,10 @@
+.more {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    .article p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

@@ -242,7 +242,7 @@ a {
     font-size: 18px;
     display: inline-block;
     line-height: 45px;
-    margin: 0 8px;
+    margin: 10px 0 5px;
     padding: 0 20px;
     cursor: pointer;
     border: 1px solid #ba851b;
@@ -476,10 +476,6 @@ a {
 }
 
 @media (max-width: 1050px) {
-    .article p {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
     .slide_item .bg_trans_black {
         padding-left: 20px;
         padding-right: 20px;
@@ -562,7 +558,7 @@ a {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 450px) {
     .pc {
         display: none;
     }
@@ -611,7 +607,7 @@ a {
         /* padding: 12px 0; */
         font-size: 16px;
         width: 90%;
-        margin-bottom: 12px;
+        margin: 5px auto 12px;
     }
     .slick-prev,
     .slick-next {
@@ -687,6 +683,9 @@ a {
     .nav_bg.show {
         z-index: 199;
         opacity: 1;
+    }
+    .more {
+        display: block;
     }
 }
 
