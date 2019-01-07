@@ -2,6 +2,10 @@
     display: none;
 }
 
+.dl.btn {
+    background-color: #fff;
+}
+
 @media (max-width: 1050px) {
     .article p {
         padding-left: 20px;
