@@ -758,14 +758,6 @@ img.goTop.show {
         background-size: 50px;
         top: 30vw;
     }
-
-    #footer li span {
-        font-size: 12px;
-        top: inherit;
-        bottom: 10px;
-        opacity: 1;
-        background: none;
-    }
 }
 
 @media (max-width: 450px) {
@@ -890,22 +882,23 @@ img.goTop.show {
         display: inline-block;
     }
 
+    div#banner {
+        margin-top: 55px;
+    }
+
     #footer {
         padding: 50px 20px;
     }
 
     #footer ul {
         margin-bottom: 0;
-        display: inline-block;
     }
 
     #footer li {
-        width: 50%;
-        margin: 0 0 15px;
-        padding-bottom: 28px;
-        float: left;
-    }
+        width: 45px;
+        margin: 0 5px;
 
+    }
 
     .title,
     .content {
@@ -925,10 +918,6 @@ img.goTop.show {
         width: 45px;
         right: 15px;
     }
-
-    #footer li img {
-        max-width: 48px;
-    }
 }
 
 body>a {
@@ -936,4 +925,6 @@ body>a {
     color: #ba851b;
     line-height: 50px;
     text-align: center;
+    font-size: 19px;
+    border-bottom: 1px solid hsla(42, 75%, 41%, 0.27);
 }
