@@ -887,16 +887,32 @@ img.goTop.show {
     }
 
     #footer {
-        padding: 50px 20px;
+        padding: 50px 0;
     }
 
     #footer ul {
         margin-bottom: 0;
+        display: inline-block;
     }
 
     #footer li {
-        width: 45px;
-        margin: 0 5px;
+        width: 50%;
+        padding-bottom: 30px;
+        margin: 0 0 15px;
+        float: left;
+    }
+
+    #footer li span {
+        top: inherit;
+        bottom: 10px;
+        opacity: 1;
+        font-size: 12px;
+        background: transparent;
+
+    }
+
+    #footer li img {
+        max-width: 46px;
 
     }
 
