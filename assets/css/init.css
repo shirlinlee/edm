@@ -232,10 +232,12 @@ a {
 
 .W1050 {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1090px;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .btn {
@@ -247,6 +249,7 @@ a {
     cursor: pointer;
     border: 1px solid #ba851b;
     color: #ba851b;
+    text-align: center;
 }
 
 .btn_golden {
@@ -255,6 +258,7 @@ a {
     padding: 0 40px;
     max-width: 300px;
     cursor: pointer;
+    text-align: center;
     transition: all .4s;
 }
 
@@ -275,6 +279,7 @@ a {
 
 .sec_title {
     font-size: 25px;
+    text-align: center;
     font-weight: 400;
     letter-spacing: 1px;
     color: #ba851b;
@@ -340,6 +345,7 @@ a {
 #banner {
     position: relative;
     min-height: 50vh;
+    max-height: 100vh;
     background: #000;
     overflow: hidden;
 }
@@ -353,7 +359,8 @@ a {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 40px 20px 90px;
+    padding-top: 40px;
+    padding-bottom: 90px;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
     transition: opacity .3s, transform .6s;
 }
@@ -456,6 +463,100 @@ a {
     margin-right: 5px;
 }
 
+
+/* mobile menu */
+
+.menu_icon {
+    width: 40px;
+    height: 45px;
+    margin: 5px 15px;
+    float: right;
+}
+
+.menu_icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 10px 0;
+    transition: all .4s;
+}
+
+.show.menu_icon span:first-child {
+    transform: rotate(45deg) translate(-2px, 0);
+    transform-origin: left bottom;
+}
+
+.show.menu_icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.show.menu_icon span:last-child {
+    transform: rotate(-45deg) translate(-2px, 2px);
+    transform-origin: left bottom;
+}
+
+.nav_bg {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 105vh;
+    width: 100vw;
+    opacity: 0;
+}
+
+.nav_bg.show {
+    z-index: 199;
+    opacity: 1;
+}
+
+
+/* light box */
+
+.lb {
+    width: 92%;
+    max-width: 800px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    padding: 20px;
+    z-index: -1;
+    text-align: left;
+    opacity: 0;
+}
+
+.lb.show {
+    opacity: 1;
+    z-index: 5000;
+}
+
+.lb .detail {
+    overflow: scroll;
+    height: calc(90vh - 80px);
+    width: 100%;
+}
+
+.lb .close {
+    margin: -10px -10px 0;
+}
+
+.lb .close span:first-child {
+    transform: rotate(45deg) translate(-2px, 0);
+    transform-origin: left bottom;
+}
+
+.lb .close span:nth-child(2) {
+    opacity: 0;
+}
+
+.lb .close span:last-child {
+    transform: rotate(-45deg) translate(-2px, 2px);
+    transform-origin: left bottom;
+}
+
 @media (min-width: 769px) {
     #banner:hover>div {
         transform: translate(0, 110%);
@@ -481,10 +582,10 @@ a {
 }
 
 @media (max-width: 1050px) {
-    .slide_item .bg_trans_black {
+    /* .slide_item .bg_trans_black {
         padding-left: 20px;
         padding-right: 20px;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
@@ -654,46 +755,8 @@ a {
         border-bottom: 1px solid rgba(182, 26, 26, 0.3);
         line-height: 40px;
     }
-    .hamburger {
-        width: 40px;
-        height: 45px;
-        margin: 5px 15px;
-        float: right;
-    }
-    .hamburger span {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #000;
-        margin: 10px 0;
-        transition: all .4s;
-    }
-    .show.hamburger span:first-child {
-        transform: rotate(45deg) translate(-2px, 0);
-        transform-origin: left bottom;
-    }
-    .show.hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-    .show.hamburger span:last-child {
-        transform: rotate(-45deg) translate(-2px, 2px);
-        transform-origin: left bottom;
-    }
-    .nav_bg {
-        position: fixed;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        height: 105vh;
-        width: 100vw;
-        opacity: 0;
-    }
-    .nav_bg.show {
-        z-index: 199;
-        opacity: 1;
-    }
     .more {
-        display: block;
+        display: inline-block;
     }
     .title,
     .content {
