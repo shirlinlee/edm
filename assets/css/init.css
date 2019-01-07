@@ -758,6 +758,14 @@ img.goTop.show {
         background-size: 50px;
         top: 30vw;
     }
+
+    #footer li span {
+        font-size: 12px;
+        top: inherit;
+        bottom: 10px;
+        opacity: 1;
+        background: none;
+    }
 }
 
 @media (max-width: 450px) {
@@ -888,13 +896,16 @@ img.goTop.show {
 
     #footer ul {
         margin-bottom: 0;
+        display: inline-block;
     }
 
     #footer li {
-        width: 45px;
-        margin: 0 5px;
-
+        width: 50%;
+        margin: 0 0 15px;
+        padding-bottom: 28px;
+        float: left;
     }
+
 
     .title,
     .content {
@@ -913,6 +924,10 @@ img.goTop.show {
         bottom: 15px;
         width: 45px;
         right: 15px;
+    }
+
+    #footer li img {
+        max-width: 48px;
     }
 }
 
