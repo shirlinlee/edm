@@ -111,10 +111,10 @@ $(document).ready(function () {
     });
 
 
-    if (navigator.msSaveBlob) {
-        console.log('ie');
-        return navigator.msSaveBlob(blob, fileName);
-    }
+    // if (navigator.msSaveBlob) {
+    //     console.log('ie');
+    //     return navigator.msSaveBlob(blob, fileName);
+    // }
 
 
 
