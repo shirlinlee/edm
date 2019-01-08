@@ -1,48 +1,43 @@
-var $body = (window.opera) ?
-    (document.compatMode == "CSS1Compat" ?
-        $('html') :
-        $('body')) :
-    $('html,body');
+var $body = (window.opera)
+    ? (document.compatMode == "CSS1Compat"
+        ? $('html')
+        : $('body'))
+    : $('html,body');
 
 $(document).ready(function () {
-    $('.carousel').slick({
-        slidesToShow: 1,
-        dots: false,
-        infinite: false
-    });
-    $('.carousel_huge').slick({
-        slidesToShow: 1,
-        dots: true,
-        infinite: false,
-        adaptiveHeight: true
-    });
+    $('.carousel').slick({slidesToShow: 1, dots: false, infinite: false});
+    $('.carousel_huge').slick({slidesToShow: 1, dots: true, infinite: false, adaptiveHeight: true});
 
     $('body').on('click', '.hamburger, .nav.show li', function () {
         $('.nav,.hamburger,.nav_bg').toggleClass('show');
     });
 
-    $('body').on('click', '.close', function () {
+    $('body').on('click', '.close, .bg_trans_golden.show_lb', function () {
         $('.lb,.nav_bg').removeClass('show show_lb');
     })
 
     $('body').on('click', '.article', function () {
-        if ($(this).find('.btn').is(':visible')) $('.lb,.nav_bg').addClass('show show_lb');
-    })
+        if ($(this).find('.btn').is(':visible')) 
+            $('.lb,.nav_bg').addClass('show show_lb');
+        }
+    )
 
     // if ($(window).innerWidth() <= 450) {
     $('.mb_carousel').slick({
         settings: "unslick",
         dots: true,
         infinite: false,
-        responsive: [{
-            breakpoint: 2560,
-            settings: "unslick"
-        }, {
-            breakpoint: 450,
-            settings: {
-                slidesToShow: 1
+        responsive: [
+            {
+                breakpoint: 2560,
+                settings: "unslick"
+            }, {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 1
+                }
             }
-        }]
+        ]
     });
 
     $('#banner').on('click', '.arrow', function () {
@@ -88,7 +83,7 @@ $(document).ready(function () {
             }, 2000)
         }
         //是版型三
-        if ($('.parallax').length === 1 && $(window).innerWidth() > 450) {
+        if ($('.parallax').length === 1 && $(window).innerWidth() > 768) {
             var scroll = $(window).scrollTop();
             var windowH = $(window).innerHeight();
             var point = (scroll - windowH) / 1 - 190;
@@ -110,17 +105,6 @@ $(document).ready(function () {
         }
     });
 
-
-    // if (navigator.msSaveBlob) {
-    //     console.log('ie');
-    //     return navigator.msSaveBlob(blob, fileName);
-    // }
-
-
-
-
-
-
-
-    // } else {}
+    // if (navigator.msSaveBlob) {     console.log('ie');     return
+    // navigator.msSaveBlob(blob, fileName); } } else {}
 });

@@ -100,7 +100,16 @@
     }
 }
 
-@media (max-width: 1050px) {}
+@media (max-width: 768px) {
+    #sec1 {
+        background-image: none !important;
+    }
+
+    #sec1>.bg_white {
+        margin-bottom: 0;
+    }
+
+}
 
 @media (max-width: 450px) {
     .f_left.W60 {
@@ -159,14 +168,6 @@
     .article.W50 .btn {
         width: 92%;
         margin: 10px 4% 25px;
-    }
-
-    #sec1 {
-        background-image: none !important;
-    }
-
-    #sec1>.bg_white {
-        margin-bottom: 0;
     }
 
     .pic {
