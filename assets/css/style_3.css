@@ -34,6 +34,10 @@
     float: left;
 }
 
+.article.W50>div {
+    overflow: hidden;
+}
+
 .W1050 .article.W50:first-child {
     padding-right: 10px;
 }
@@ -84,6 +88,16 @@
 
 .article.W50 {
     cursor: pointer;
+}
+
+@media (min-width: 769px) {
+    .article:hover .btn.more:after {
+        margin-right: -20px;
+    }
+
+    .article.W50:hover>div img {
+        transform: scale(1.05)
+    }
 }
 
 @media (max-width: 1050px) {}
