@@ -52,6 +52,10 @@
     padding-right: 0;
 }
 
+.article.W33 {
+    cursor: pointer;
+}
+
 @media (min-width: 769px) {
     .btn.more:hover:after {
         margin-right: -20px;
