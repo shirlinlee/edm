@@ -103,6 +103,7 @@
 @media (max-width: 768px) {
     #sec1 {
         background-image: none !important;
+        padding: 0;
     }
 
     #sec1>.bg_white {
