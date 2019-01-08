@@ -444,7 +444,6 @@ img.goTop.show {
     background: rgba(225, 205, 152, 0.77);
     cursor: pointer;
     z-index: 50;
-    opacity: .5;
 }
 
 /* article */
@@ -638,6 +637,10 @@ img.goTop.show {
     #banner:hover>div {
         transform: translate(0, 110%);
         opacity: 0;
+    }
+
+    #banner:hover .arrow {
+        opacity: .5;
     }
 
     .slick-next:hover,
