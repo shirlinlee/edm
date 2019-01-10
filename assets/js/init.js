@@ -12,6 +12,10 @@ $(document).ready(function () {
         $('.nav,.hamburger,.nav_bg').toggleClass('show');
     });
 
+    $('body').on('click', '.bg_trans_golden', function () {
+        $('.nav,.hamburger,.nav_bg').removeClass('show');
+    });
+
     $('body').on('click', '.close, .bg_trans_golden.show_lb', function () {
         $('.lb,.nav_bg').removeClass('show show_lb');
     })
