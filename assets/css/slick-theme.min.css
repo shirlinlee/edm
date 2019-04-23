@@ -1,5 +1,4 @@
 @charset 'UTF-8';
-
 .slick-loading .slick-list {
     background: #fff url('./ajax-loader.gif') center center no-repeat
 }
@@ -17,7 +16,7 @@
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: 50%;
+    top: 26vw;
     display: block;
     width: 20px;
     height: 20px;
@@ -28,6 +27,13 @@
     border: 0;
     outline: 0;
     background: transparent
+}
+
+@media (min-width: 1050px) {
+    .slick-prev,
+    .slick-next {
+        top: 300px;
+    }
 }
 
 .slick-prev:hover,
@@ -107,7 +113,6 @@
     padding: 0;
     cursor: pointer
 }
-
 
 .slick-dots li button {
     font-size: 0;
