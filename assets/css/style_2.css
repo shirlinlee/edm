@@ -8,6 +8,11 @@
     float: left;
 }
 
+.article.W33>div {
+    overflow: hidden;
+}
+
+
 .W1050 .W33.center {
     margin-left: 2%;
     margin-right: 2%;
@@ -39,7 +44,11 @@
     background-position: right 9px;
     display: inline-block;
     margin-right: -15px;
-    transition: all .4s;
+}
+
+.btn.mb.more:after {
+    display: none;
+
 }
 
 #sec4 {
@@ -47,9 +56,18 @@
     padding-right: 0;
 }
 
+.article.W33 {
+    cursor: pointer;
+}
+
 @media (min-width: 769px) {
-    .btn.more:hover:after {
+
+    .article:hover .btn.more:after {
         margin-right: -20px;
+    }
+
+    .article.W33:hover>div img {
+        transform: scale(1.05)
     }
 }
 

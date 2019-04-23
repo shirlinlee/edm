@@ -12,9 +12,19 @@ $(document).ready(function () {
         $('.nav,.hamburger,.nav_bg').toggleClass('show');
     });
 
-    $('body').on('click', '.more, .close', function () {
-        $('.lb,.nav_bg').toggleClass('show show_lb');
+    $('body').on('click', '.bg_trans_golden', function () {
+        $('.nav,.hamburger,.nav_bg').removeClass('show');
+    });
+
+    $('body').on('click', '.close, .bg_trans_golden.show_lb', function () {
+        $('.lb,.nav_bg').removeClass('show show_lb');
     })
+
+    $('body').on('click', '.article', function () {
+        if ($(this).find('.btn').is(':visible')) 
+            $('.lb,.nav_bg').addClass('show show_lb');
+        }
+    )
 
     // if ($(window).innerWidth() <= 450) {
     $('.mb_carousel').slick({
@@ -76,7 +86,29 @@ $(document).ready(function () {
                 isScroll = false;
             }, 2000)
         }
+        //是版型三
+        if ($('.parallax').length === 1 && $(window).innerWidth() > 768) {
+            var scroll = $(window).scrollTop();
+            var windowH = $(window).innerHeight();
+            var point = (scroll - windowH) / 1 - 190;
+
+            if (point >= 500) {
+                point = 500;
+            }
+
+            if (point <= -30) {
+                point = -30;
+            }
+
+            // console.log(point);
+
+            $('.parallax').css({
+                'transform': 'translate(0,' + point + 'px)'
+            })
+
+        }
     });
 
-    // } else {}
+    // if (navigator.msSaveBlob) {     console.log('ie');     return
+    // navigator.msSaveBlob(blob, fileName); } } else {}
 });

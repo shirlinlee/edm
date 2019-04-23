@@ -6,9 +6,19 @@
     background-color: #fff;
 }
 
-@media (max-width: 1050px) {
-    .article p {
-        padding-left: 20px;
-        padding-right: 20px;
+
+@media (min-width: 769px) {
+    .dl.btn:hover {
+        background-color: #ba851b;
+    }
+}
+
+@media (max-width: 450px) {
+    .slick-prev {
+        left: -3px;
+    }
+
+    .slick-next {
+        right: -3px;
     }
 }
