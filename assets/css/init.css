@@ -292,7 +292,6 @@ a {
     width: 100%;
 }
 
-
 .content {
     padding: 5px 0 15px;
     line-height: 1.6;
@@ -324,6 +323,7 @@ a {
     font-size: 17px;
     line-height: 1;
 }
+
 
 /* top */
 
@@ -457,10 +457,15 @@ img.goTop.show {
     height: 60px;
     border-radius: 50%;
     padding: 18px 15px;
-    background: rgba(225, 205, 152, 0.77);
+    background: rgba(255, 255, 255, 0.77);
     cursor: pointer;
     z-index: 50;
 }
+
+#banner .arrow img:last-child {
+    display: none;
+}
+
 
 /* article */
 
@@ -476,6 +481,7 @@ img.goTop.show {
 .article {
     margin-bottom: 50px;
 }
+
 
 /* slider */
 
@@ -506,6 +512,7 @@ img.goTop.show {
     left: 15px;
     transform: rotate(180deg);
 }
+
 
 /* æœ€ä¸‹åœ–ç‰‡ç²¾é¸è¼ªæ’­ */
 
@@ -543,6 +550,7 @@ img.goTop.show {
     margin-left: 5px;
     margin-right: 5px;
 }
+
 
 /* mobile menu */
 
@@ -644,26 +652,23 @@ img.goTop.show {
 
 
 /* article */
+
 .article .title {
     font-weight: 500;
     color: #464646;
 }
 
-
 @media (min-width: 769px) {
     .nav li a:hover {
         color: #ba851b;
     }
-
     #banner:hover>div {
         transform: translate(0, 110%);
         opacity: 0;
     }
-
     #banner:hover .arrow {
         opacity: .5;
     }
-
     .slick-next:hover,
     .slick-prev:hover {
         background-position-x: left;
@@ -672,7 +677,17 @@ img.goTop.show {
         transform: scale(1.01);
     }
     #banner .arrow:hover {
+        background: #000;
+        color: #fff;
+        border-color: #fff;
         transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+    }
+    #banner .arrow:hover img:last-child {
+        display: block;
+    }
+    #banner .arrow:hover img:first-child {
+        display: none;
     }
     .btn:hover {
         /* color: #fff;
@@ -685,17 +700,11 @@ img.goTop.show {
         transform: translate(-50%, 0);
         opacity: 1;
     }
-
     img.goTop:hover {
         opacity: 1;
         transform: scale(1);
         cursor: pointer;
     }
-
-    #banner .arrow:hover {
-        opacity: 1;
-    }
-
     /* .slick-prev:hover {
   background-position-x: right;
 } */
@@ -757,7 +766,6 @@ img.goTop.show {
         padding: 20px 0 50px;
     }
     #banner .arrow {
-        background: #b6861a;
         bottom: -28px;
     }
     #banner {
@@ -845,7 +853,6 @@ img.goTop.show {
         background-size: 45px;
         top: 27vw;
     }
-
     /* .slick-next {
         right: 0;
     }
@@ -853,7 +860,6 @@ img.goTop.show {
     .slick-prev {
         left: 0;
     } */
-
     #sec5 {
         padding: 20px 20px 40px;
     }
@@ -890,15 +896,12 @@ img.goTop.show {
     .more {
         display: inline-block;
     }
-
     #banner {
         margin-top: 55px;
     }
-
     #banner>div {
         padding: 10px 0 20px;
     }
-
     #footer {
         padding: 50px 0;
     }
