@@ -25,8 +25,8 @@ $(document).ready(function() {
             $('.lb,.nav_bg').addClass('show show_lb');
     })
 
-    $('.img_wrapper').on('click', 'img', function() {
-        $('.lb,.nav_bg').addClass('show show_lb');
+    $('body').on('click', '.parallax', function() {
+        window.open($(this).attr('data-href'));
     })
 
     // if ($(window).innerWidth() <= 450) {
