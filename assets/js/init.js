@@ -1,50 +1,51 @@
-var $body = (window.opera)
-    ? (document.compatMode == "CSS1Compat"
-        ? $('html')
-        : $('body'))
-    : $('html,body');
+var $body = (window.opera) ?
+    (document.compatMode == "CSS1Compat" ?
+        $('html') :
+        $('body')) :
+    $('html,body');
 
-$(document).ready(function () {
-    $('.carousel').slick({slidesToShow: 1, dots: false, infinite: false});
-    $('.carousel_huge').slick({slidesToShow: 1, dots: true, infinite: false, adaptiveHeight: true});
+$(document).ready(function() {
+    $('.carousel').slick({ slidesToShow: 1, dots: false, infinite: false });
+    $('.carousel_huge').slick({ slidesToShow: 1, dots: true, infinite: false, adaptiveHeight: true });
 
-    $('body').on('click', '.hamburger, .nav.show li', function () {
+    $('body').on('click', '.hamburger, .nav.show li', function() {
         $('.nav,.hamburger,.nav_bg').toggleClass('show');
     });
 
-    $('body').on('click', '.bg_trans_golden', function () {
+    $('body').on('click', '.bg_trans_golden', function() {
         $('.nav,.hamburger,.nav_bg').removeClass('show');
     });
 
-    $('body').on('click', '.close, .bg_trans_golden.show_lb', function () {
+    $('body').on('click', '.close, .bg_trans_golden.show_lb', function() {
         $('.lb,.nav_bg').removeClass('show show_lb');
     })
 
-    $('body').on('click', '.article', function () {
-        if ($(this).find('.btn').is(':visible')) 
+    $('body').on('click', '.article', function() {
+        if ($(this).find('.btn').is(':visible'))
             $('.lb,.nav_bg').addClass('show show_lb');
-        }
-    )
+    })
+
+    $('.img_wrapper').on('click', 'img', function() {
+        $('.lb,.nav_bg').addClass('show show_lb');
+    })
 
     // if ($(window).innerWidth() <= 450) {
     $('.mb_carousel').slick({
         settings: "unslick",
         dots: true,
         infinite: false,
-        responsive: [
-            {
-                breakpoint: 2560,
-                settings: "unslick"
-            }, {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 1
-                }
+        responsive: [{
+            breakpoint: 2560,
+            settings: "unslick"
+        }, {
+            breakpoint: 450,
+            settings: {
+                slidesToShow: 1
             }
-        ]
+        }]
     });
 
-    $('#banner').on('click', '.arrow', function () {
+    $('#banner').on('click', '.arrow', function() {
         $body.animate({
             scrollTop: $('#sec1')
                 .offset()
@@ -52,7 +53,7 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $('#top').on('click', 'li', function () {
+    $('#top').on('click', 'li', function() {
         var index = $(this).index();
         if (index === 0) {
             $body.animate({
@@ -68,7 +69,7 @@ $(document).ready(function () {
 
     });
 
-    $('#footer').on('click', '.goTop', function () {
+    $('#footer').on('click', '.goTop', function() {
         $body.animate({
             scrollTop: 0
         }, 500);
@@ -76,12 +77,12 @@ $(document).ready(function () {
 
     var isScroll = false;
 
-    $(window).scroll(function (event) {
+    $(window).scroll(function(event) {
 
         if (!isScroll) {
             isScroll = true;
             $('.goTop').addClass('show');
-            setTimeout(function () {
+            setTimeout(function() {
                 $('.goTop').removeClass('show');
                 isScroll = false;
             }, 2000)
